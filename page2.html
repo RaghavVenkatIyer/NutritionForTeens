@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI and Fat Percentage Calculators</title>
+
+  <!-- Google Translate Widget -->
+  <div id="google_translate_element"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'af,am,ar,az,be,bg,bn,bs,ca,ceb,co,cs,cy,da,de,el,en,eo,es,et,eu,fa,fi,fr,fy,ga,gd,gl,gu,ha,haw,hi,hmn,hr,ht,hu,hy,id,ig,is,it,iw,ja,jw,ka,kk,km,kn,ko,ku,ky,la,lb,lo,lt,lv,mg,mi,mk,ml,mn,mr,ms,mt,my,ne,nl,no,ny,or,pa,pl,ps,pt,ro,ru,rw,sd,si,sk,sl,sm,sn,so,sq,sr,st,su,sv,sw,ta,te,tg,th,tk,tl,tr,tt,ug,uk,ur,uz,vi,xh,yi,yo,zh-CN,zh-TW,zu', 
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #FFFAE5, #FFC107, #FF7043);
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      padding: 2px;
+      color: #2E7D32;
+    }
+    .center {
+      text-align: center;
+      margin: 20px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #2E7D32;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1B5E20;
+    }
+    .animation-bar {
+      height: 10px;
+      width: 100%;
+      background: linear-gradient(90deg, #FFA726, #66BB6A, #29B6F6);
+      animation: fadeSlide 3s infinite alternate;
+      margin: 20px 0;
+    }
+    @keyframes fadeSlide {
+      0% {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+      100% {
+        opacity: 0.4;
+        transform: translateX(100%);
+      }
+    }
+    .content-section {
+      padding: 1px;
+      max-width: 2000px;
+      margin: 0 auto;
+      text-align: justify;
+    }
+    h2 {
+      text-align: center;
+      margin: 30px 0;
+      color: #2E7D32;
+    }
+    .calculator-container {
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      margin: 5px 0;
+    }
+    .calculator {
+      border: 2px solid #333;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #fff;
+      flex: 1;
+      max-width: 500px;
+      text-align: center;
+    }
+    .calculator input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .calculator button {
+      background-color: #2E7D32;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .calculator button:hover {
+      background-color: #1B5E20;
+    }
+    .image-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1><u>BMI and Fat Percentage Calculators</h1></u>
+
+  <!-- Google Translate -->
+  <div id="google_translate_element"></div>
+
+  <div class="center">
+    <button onclick="location.href='#bmi'">BMI Calculator</button>
+    <button onclick="location.href='#fat-percentage'">Fat Percentage Calculator</button>
+  </div>
+
+  <div class="animation-bar"></div>
+
+  <div class="content-section">
+    <p>
+      Maintaining a healthy body weight is essential for overall health and well-being. Body Mass Index (BMI) is a simple tool that helps assess whether a person is underweight, normal weight, overweight, or obese based on their height and weight. It provides a quick overview of body composition and potential health risks related to weight. However, BMI does not account for muscle mass or fat distribution, which are crucial for a deeper understanding of health. That's where fat percentage calculations come into play.
+    </p>
+    <p>
+      Fat percentage offers a more detailed picture of body composition by measuring the proportion of fat in relation to total body weight. This metric is particularly valuable for tracking fitness progress, especially for athletes and individuals aiming for fat loss rather than weight loss. Together, BMI and fat percentage calculators provide valuable insights into your health and fitness journey.
+    </p>
+  </div>
+
+  <div class="image-container">
+    <img src="image2.2.jpg" alt="BMI and Fat Percentage Information" />
+  </div>
+  <div class="image-container">
+    <img src="image2.1.jpg" alt="Person Standing on Weighing Scale" />
+  </div>
+
+  <h2>How BMI and Fat Percentage Can Be Used to Help Reduce Obesity</h2>
+  <div class="content-section">
+    <p>
+      Both BMI and body fat percentage are essential metrics that play a significant role in understanding obesity and creating strategies for reducing it. By regularly monitoring these numbers, individuals can identify potential health risks related to obesity, such as heart disease, diabetes, and high blood pressure. While BMI provides a general overview, fat percentage offers a more detailed insight into body composition, helping to assess how much of the body is composed of fat versus muscle.
+    </p>
+    <p>
+      By focusing on both BMI and fat percentage, individuals can develop personalized fitness plans targeting fat loss while preserving muscle mass. This dual approach is essential for reducing obesity in a healthy, sustainable way. Furthermore, regularly tracking these metrics can motivate individuals to stay on track with their diet and exercise plans, as improvements in both BMI and fat percentage often lead to better overall health outcomes.
+    </p>
+    <p>
+      For people who are trying to lose weight, a lower BMI and reduced fat percentage indicate a healthier body composition. These metrics help guide progress and can be used to adjust nutrition, exercise, and lifestyle habits. In conjunction with medical advice and a balanced approach to fitness, tracking BMI and fat percentage can support long-term weight management goals.
+    </p>
+  </div>
+
+  <div class="calculator-container">
+    <div id="bmi" class="calculator">
+      <h2>BMI Calculator</h2>
+      <input type="number" id="bmi-height" placeholder="Height in cm" />
+      <input type="number" id="bmi-weight" placeholder="Weight in kg" />
+      <button onclick="calculateBMI()">Calculate BMI</button>
+      <p id="bmi-result"></p>
+      <p id="bmi-category"></p>
+    </div>
+
+    <div id="fat-percentage" class="calculator">
+      <h2>Fat Percentage Calculator</h2>
+      <input type="number" id="fat-age" placeholder="Age in years" />
+      <input type="number" id="fat-weight" placeholder="Weight in kg" />
+      <input type="number" id="fat-waist" placeholder="Waist circumference in cm" />
+      <button onclick="calculateFatPercentage()">Calculate Fat Percentage</button>
+      <p id="fat-percentage-result"></p>
+      <p id="fat-category"></p>
+    </div>
+  </div>
+
+  <script>
+    function calculateBMI() {
+      const height = parseFloat(document.getElementById("bmi-height").value) / 100;
+      const weight = parseFloat(document.getElementById("bmi-weight").value);
+      if (height > 0 && weight > 0) {
+        const bmi = (weight / (height * height)).toFixed(2);
+        document.getElementById("bmi-result").innerText = `Your BMI is ${bmi}.`;
+        
+        let category = "";
+        if (bmi < 18.5) {
+          category = "Underweight";
+        } else if (bmi >= 18.5 && bmi < 24.9) {
+          category = "Normal weight";
+        } else if (bmi >= 25 && bmi < 29.9) {
+          category = "Overweight";
+        } else {
+          category = "Obese";
+        }
+        document.getElementById("bmi-category").innerText = `Category: ${category}`;
+      } else {
+        alert("Please enter valid values for height and weight.");
+      }
+    }
+
+    function calculateFatPercentage() {
+      const age = parseFloat(document.getElementById("fat-age").value);
+      const weight = parseFloat(document.getElementById("fat-weight").value);
+      const waist = parseFloat(document.getElementById("fat-waist").value);
+      if (age > 0 && weight > 0 && waist > 0) {
+        const fatPercentage = (waist * 0.74 + weight * 0.082 - age * 0.34).toFixed(2);
+        document.getElementById("fat-percentage-result").innerText = `Your Fat Percentage is ${fatPercentage}%.`;
+        
+        let category = "";
+        if (fatPercentage < 18) {
+          category = "Low Fat";
+        } else if (fatPercentage >= 18 && fatPercentage < 24) {
+          category = "Healthy Range";
+        } else {
+          category = "High Fat";
+        }
+        document.getElementById("fat-category").innerText = `Category: ${category}`;
+      } else {
+        alert("Please enter valid values for age, weight, and waist circumference.");
+      }
+    }
+  </script>
+</body>
+</html>
