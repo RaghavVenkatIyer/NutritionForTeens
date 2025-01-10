@@ -139,14 +139,13 @@
   <h1><u>Get Your Own Personalized Nutrition Plan</u></h1>
 
   <div class="center-buttons">
-    <button onclick="location.href='page1.html'">Homepage</button>
-    <button onclick="location.href='page2.html'">Find Your BMI and Fat Percentage</button>
+    <button>Learn More</button>
+    <button>Contact Us</button>
   </div>
 
   <div class="animation-bar"></div>
 
   <div class="image-text-container">
-    <h1><u>Why a diet is essential: -</u></h1>
     <p>
       Personalized nutrition is a key tool in combating obesity, especially among teenagers. Research has shown that proper nutrition can reduce obesity rates significantly. According to the World Health Organization (WHO), childhood obesity rates have tripled since 1975, with 39 million children under the age of five being overweight or obese in 2020. In the United States, the prevalence of obesity among teenagers aged 12–19 is around 21.2%, as per the Centers for Disease Control and Prevention (CDC). A well-planned nutrition program can reduce these alarming statistics by addressing unhealthy eating habits early.
       <br><br>
@@ -162,7 +161,7 @@
       <br><br>
       By incorporating proper nutrition into daily life, teenagers can reduce the risk of obesity and its associated complications, including diabetes, heart disease, and joint problems. Globally, addressing obesity through nutrition has the potential to save billions in healthcare costs and improve overall quality of life.
     </p>
-    <img src="image3.1.jpg" alt="Healthy Nutrition">
+    <img src="https://via.placeholder.com/600x300" alt="Healthy Nutrition">
   </div>
 
   <div id="chat-container" class="chatbot-container">
@@ -172,5 +171,82 @@
       <button class="btn">Go</button>
     </div>
   </div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+      }
+    }
+  </script>
+  <script type="module">
+    import { GoogleGenerativeAI } from "@google/generative-ai";
+    const API_KEY = "YOUR_API_KEY";
+    const model = new GoogleGenerativeAI(API_KEY);
+
+    const chatbotContainer = document.querySelector("#chat-container");
+    const chatHistory = chatbotContainer.querySelector(".chat-history");
+    const userInput = document.querySelector("#userprompt");
+
+    document.querySelector(".btn").addEventListener("click", () => {
+      const message = userInput.value;
+      if (!message) return;
+
+      chatHistory.appendChild(createUserMessageDiv(message));
+      userInput.value = "";
+
+      model
+        .generateText(message)
+        .then((response) => {
+          chatHistory.appendChild(createBotMessageDiv(response.candidates[0].content));
+          chatHistory.scrollTop = chatHistory.scrollHeight;
+        });
+    });
+
+    function createUserMessageDiv(message) {
+      const div = document.createElement("div");
+      div.textContent = `User: ${message}`;
+      div.className = "message user-message";
+      return div;
+    }
+
+    function createBotMessageDiv(message) {
+      const div = document.createElement("div");
+      div.textContent = message;
+      div.className = "message bot-message";
+      return div;
+    }
+  </script>
+  <div class="recaptcha-container">
+    <div class="g-recaptcha" data-sitekey="6LdjY7MqAAAAAJfAUO-VfCx1arFQMeCNg6To1GnB"></div>
+    <button type="submit">Submit</button>
+  </div>
+ <div id="result"></div>
+ <script>
+    // Handle button clicks
+    document.addEventListener('click', function(event) {
+      if (event.target.tagName === 'BUTTON') {
+        event.preventDefault();  // Prevent default form submission
+
+        // Get reCAPTCHA response token
+        var recaptchaResponse = grecaptcha.getResponse();
+
+        if (recaptchaResponse.length === 0) {
+          document.getElementById('result').innerText = "Please complete the reCAPTCHA!";
+        } else {
+          var formData = new FormData();
+          formData.append('recaptchaToken', recaptchaResponse);
+          document.getElementById('result').innerText = "reCAPTCHA verification successful!";
+        }
+      }
+    });
+    const content = document.querySelector('.content');
+    const disqusContainer = document.querySelector('.disqus-container'); // Get the Disqus container
+    const progressBarContainer = document.querySelector('.progress-bar-container');
+    const normalTextElements = document.querySelectorAll('.normal-text');
+
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</div>
 </body>
 </html>
