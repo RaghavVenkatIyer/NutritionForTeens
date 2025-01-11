@@ -161,67 +161,74 @@
       <br><br>
       By incorporating proper nutrition into daily life, teenagers can reduce the risk of obesity and its associated complications, including diabetes, heart disease, and joint problems. Globally, addressing obesity through nutrition has the potential to save billions in healthcare costs and improve overall quality of life.
     </p>
-    <img src="https://via.placeholder.com/600x300" alt="Healthy Nutrition">
+    <img src="image3.1.jpg/600x300" alt="Healthy Nutrition">
   </div>
-
-  <div id="chat-container" class="chatbot-container">
-    <div class="chat-history"></div>
-    <div class="user-input-div">
-      <input type="text" placeholder="Provide your details to get a personal nutrition plan." class="user-input" id="userprompt"/>
-      <button class="btn">Go</button>
-    </div>
-  </div>
-
-  <script type="importmap">
-    {
-      "imports": {
-        "@google/generative-ai": "https://esm.run/@google/generative-ai"
-      }
-    }
-  </script>
-  <script type="module">
-    import { GoogleGenerativeAI } from "@google/generative-ai";
-    const API_KEY = "AIzaSyB7CLgpUT6ZDomNpmM2cuPM1Sa4O47B_mo";
-    const model = new GoogleGenerativeAI(API_KEY);
-
-    const chatbotContainer = document.querySelector("#chat-container");
-    const chatHistory = chatbotContainer.querySelector(".chat-history");
-    const userInput = document.querySelector("#userprompt");
-
-    document.querySelector(".btn").addEventListener("click", () => {
-      const message = userInput.value;
-      if (!message) return;
-
-      chatHistory.appendChild(createUserMessageDiv(message));
-      userInput.value = "";
-
-      model
-        .generateText(message)
-        .then((response) => {
-          chatHistory.appendChild(createBotMessageDiv(response.candidates[0].content));
-          chatHistory.scrollTop = chatHistory.scrollHeight;
-        });
-    });
-
-    function createUserMessageDiv(message) {
-      const div = document.createElement("div");
-      div.textContent = `User: ${message}`;
-      div.className = "message user-message";
-      return div;
-    }
-
-    function createBotMessageDiv(message) {
-      const div = document.createElement("div");
-      div.textContent = message;
-      div.className = "message bot-message";
-      return div;
-    }
-  </script>
-  <div class="recaptcha-container">
-    <div class="g-recaptcha" data-sitekey="6LelZrMqAAAAACBzecqr29V_ycbNSirY_h56LJHq"></div>
-    <button type="submit">Submit</button>
-  </div>
- <div id="result"></div>
+    <!-- Chatbot Code Starting -->
+    <div id="chat-container" class="chatbot-container">
+        <div class="chat-history"></div>
+        <div class="user-input-div">
+          <input type="text" placeholder="My BMI is____ My fat percentage is____ My mass is____ and I want to reduce my mass by____ kgs, in____months, give me a nutrition plan that I can follow to reduce weight safely." class="user-input" id="userprompt"/>
+          <button class="btn">Go</button>
+        </div>
+      </div>
+  
+      <script type="importmap">
+          {
+            "imports": {
+              "@google/generative-ai": "https://esm.run/@google/generative-ai"
+            }
+          }
+        </script>
+        <script type="module">
+          import { GoogleGenerativeAI } from "@google/generative-ai";
+          const API_KEY = "AIzaSyB7CLgpUT6ZDomNpmM2cuPM1Sa4O47B_mo";
+          const genAI = new GoogleGenerativeAI(API_KEY);
+      
+          document.querySelector('.btn').addEventListener('click', run);
+      
+          async function run() {
+            try {
+              const userInput = document.getElementById("userprompt").value;
+              if (userInput.trim() === "") return;
+      
+              const userMessageDiv = createUserMessageDiv(userInput);
+              document.querySelector('.chat-history').appendChild(userMessageDiv);
+      
+              const botMessageDiv = createBotMessageDiv("Thinking...");
+              document.querySelector('.chat-history').appendChild(botMessageDiv);
+      
+              const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+              const result = await model.generateContent(userInput);
+              const text = extractTextFromResponse(result.response);
+      
+              const newBotMessageDiv = createBotMessageDiv(text);
+              document.querySelector('.chat-history').appendChild(newBotMessageDiv);
+            } catch (err) {
+              alert(err);
+            }
+          }
+      
+          function extractTextFromResponse(response) {
+            if (response.candidates && response.candidates.length > 0) {
+              return response.candidates[0].content.parts.map(part => part.text || '').join('');
+            }
+            return "No valid response from AI";
+          }
+      
+          function createUserMessageDiv(message) {
+            const div = document.createElement("div");
+            div.className = "message user-message";
+            div.textContent = `User: ${message}`;
+            return div;
+          }
+      
+          function createBotMessageDiv(message) {
+            const div = document.createElement("div");
+            div.className = "message bot-message";
+            div.textContent = `Bot: ${message}`;
+            return div;
+          }
+        </script>
  <script>
     // Handle button clicks
     document.addEventListener('click', function(event) {
