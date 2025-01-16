@@ -9,13 +9,13 @@
       font-family: "Times New Roman", Times, serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom, #FFFAE5, #FFC107, #FF7043); 
+      background: linear-gradient(to bottom, #FFFAE5, #FFC107, #FF7043);
       color: #333;
     }
     h1 {
       text-align: center;
       padding: 20px;
-      color: #2E7D32; 
+      color: #2E7D32;
     }
     .center {
       text-align: center;
@@ -54,48 +54,26 @@
     .content-section {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: center;
       margin: 20px 0;
+      flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
     }
     .content-section div {
       flex: 1;
-      max-width: 70%;
+      max-width: 60%; /* Adjusted for better spacing */
       padding: 10px;
       text-align: justify;
-      animation: fadeIn 2s ease;
-    }
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
     }
     .content-section img {
-      width: 200px; /* Increased size for images beside bullets */
-      height: 200px; /* Increased size for images beside bullets */
+      max-width: 35%; /* Prevents images from dominating the layout */
+      height: auto;
       border-radius: 10px;
-      margin-left: 10px;
-      align-self: flex-start;
-      position: absolute;
-      right: 20px;
+      margin: 0 10px;
     }
     h2 {
       text-align: center;
       margin: 30px 0;
       color: #2E7D32;
-      animation: fadeInSlide 2s ease;
-    }
-    @keyframes fadeInSlide {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
     .citation-box {
       margin: 30px;
@@ -108,19 +86,16 @@
     .stats {
       font-weight: bold;
       color: #BF360C;
-      animation: fadeInSlide 2s ease;
     }
     /* Responsive Design */
     @media (max-width: 768px) {
       .content-section {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
       }
       .content-section img {
-        position: relative;
-        margin-left: 0;
-        margin-top: 10px;
-        right: auto;
+        max-width: 90%;
+        margin: 10px 0;
       }
     }
   </style>
@@ -136,55 +111,40 @@
   <div class="animation-bar"></div>
 
   <h2>What Is Meant by a Healthy Lifestyle :</h2>
-  <div style="padding: 20px; max-width: 1500px; margin: 0 auto; text-align: justify;">
-    <p>Living a healthy lifestyle means eating nutritious foods, staying physically active, getting enough sleep, and managing stress. As a teenager, you are in a unique stage of growth and development, which makes it even more important to adopt these habits. Skipping meals, choosing fast food over home-cooked meals, and spending too much time on screens might be holding you back from feeling your best.</p>
-    <p>You must make conscious choices to fuel your body with the right nutrients. Begin your day with a wholesome breakfast to maintain your energy levels and concentration. Swap sugary drinks for water or natural juices and opt for whole foods over processed ones. Trust us—it makes a world of difference!</p>
-    <p>Think about your future self: do you want to deal with health issues like obesity, fatigue, or low energy? Start small. Add an extra serving of vegetables to your plate, take a 15-minute walk after meals, and aim for 8 hours of sleep each night. Your body will thank you!</p>
-    <p class="stats">Worldwide, over 340 million children and adolescents aged 5-19 were overweight or obese in 2016, according to the World Health Organization (WHO).</p>
-    <img src="image1.4.jpg" alt="Healthy Food" style="width: 700px; height: 500px;">  
-</div>
+  <div style="padding: 20px; max-width: 1200px; margin: 0 auto; text-align: justify;">
+    <p>Living a healthy lifestyle means eating nutritious foods, staying physically active, getting enough sleep, and managing stress...</p>
+    <img src="image1.4.jpg" alt="Healthy Food">
+  </div>
 
   <h2>Common Causes of Obesity</h2>
   <div class="content-section">
     <div>
-      <p><b>&#8226; Poor Diet Choices:</b> Are you reaching for chips and soda instead of fruits or yogurt? These poor choices add up. Foods high in sugar and unhealthy fats not only lead to weight gain but can also drain your energy and affect your focus. Excess sugar in the diet leads to increased insulin production, which promotes fat storage in the body. This process can also contribute to inflammation, leading to chronic conditions like type 2 diabetes.</p>
-      <p>You can prepare your own healthy snacks like trail mix or fruit smoothies. It’s quick, easy, and tastes amazing. Remember, what you eat today shapes your body and mind tomorrow!</p>
-      <p class="stats">In the United States, nearly 1 in 5 children and adolescents (19.3%) are affected by obesity, according to the CDC.</p>
+      <p><b>&#8226; Poor Diet Choices:</b> Are you reaching for chips and soda instead of fruits or yogurt?...</p>
     </div>
-    <img src="image1.1.jpg" alt="Healthy Food" style="width: 400px; height: 500px;">
+    <img src="image1.1.jpg" alt="Healthy Food">
   </div>
   <div class="content-section">
     <div>
-      <p><b>&#8226; Lack of Physical Activity:</b> Spending hours gaming or scrolling through social media? You’re not alone, but being active is key to staying healthy. Just 60 minutes of physical activity a day can work wonders—play a sport, dance to your favorite music, or go for a jog with friends. Make it fun!</p>
-      <p>Physical activity not only burns calories but also increases metabolism, helping your body to burn fat more efficiently. For instance, running can burn 600 to 1000 calories per hour depending on intensity and body weight. A combination of cardio and strength exercises is ideal for keeping your body lean and healthy.</p>
-      <p>Try setting small goals, like taking the stairs instead of the elevator or biking to school. Every little bit helps, and soon you’ll notice how much stronger and more energetic you feel.</p>
-      <p class="stats">Globally, 81% of adolescents aged 11–17 are insufficiently physically active, as per WHO data.</p>
+      <p><b>&#8226; Lack of Physical Activity:</b> Spending hours gaming or scrolling through social media?...</p>
     </div>
-    <img src="image1.2.jpg" alt="Exercise" style="width: 400px; height: 500px;">
+    <img src="image1.2.jpg" alt="Exercise">
   </div>
   <div class="content-section">
     <div>
-      <p><b>&#8226; Stress and Mental Health:</b> Did you know that stress can lead to overeating or unhealthy eating habits? Stress triggers the release of cortisol, a hormone that can increase appetite and cravings for sugary or high-fat foods. Prolonged stress can lead to weight gain and a weakened immune system.</p>
-      <p>Managing stress through activities like mindfulness, yoga, or talking to someone you trust can help reduce its negative impact on your eating habits. It’s essential to learn how to cope with stress in healthy ways, especially during the challenging teenage years.</p>
-      <p class="stats">According to the American Psychological Association, nearly 70% of teens report feeling stressed regularly.</p>
+      <p><b>&#8226; Stress and Mental Health:</b> Did you know that stress can lead to overeating or unhealthy eating habits?...</p>
     </div>
-    <img src="image1.3.jpg" alt="Stress Management" style="width: 400px; height: 500px;">
+    <img src="image1.3.jpg" alt="Stress Management">
   </div>
 
   <h2>Why Proper Nutrition is Essential :</h2>
-  <div style="padding: 2px; text-align: justify; max-width: 1500px; margin: 0 auto;">
-    <p>Imagine feeling energized all day, acing your exams, and performing your best in sports. Proper nutrition is the secret. Eating a balanced diet with whole grains, lean proteins, fruits, and vegetables gives your body the fuel it needs to thrive.</p>
-    <p>On the flip side, poor nutrition can lead to serious consequences like obesity, fatigue, and even chronic diseases such as diabetes and heart issues later in life. Think about this: by making healthier choices now, you can avoid these pitfalls and build a strong foundation for your future.</p>
-    <p class="stats">Eating well supports cognitive functions, leading to better concentration and memory, which are essential for school performance.</p>
+  <div style="padding: 20px; max-width: 1200px; margin: 0 auto; text-align: justify;">
+    <p>Imagine feeling energized all day, acing your exams, and performing your best in sports...</p>
   </div>
-      <div class="citation-box">
-        <h3>Sources:</h3>
-        <p>World Health Organization. “Obesity and Overweight.” 2021. www.who.int.</p>
-        <p>Centers for Disease Control and Prevention. “Childhood Obesity Facts.” 2022. www.cdc.gov.</p>
-        <p>Global Nutrition Report. “2020 Global Nutrition Report.” globalnutritionreport.org.</p>
-        <p>European Association for the Study of Obesity. “Childhood Obesity.” www.easo.org.</p>
-        <p>National Institute of Diabetes and Digestive and Kidney Diseases. “Overweight and Obesity Statistics.” www.niddk.nih.gov.</p>
-        <p>Harvard School of Public Health. “The Nutrition Source.” www.hsph.harvard.edu.</p>
-      </div>
-    </body>
-    </html>
+
+  <div class="citation-box">
+    <h3>Sources:</h3>
+    <p>World Health Organization. “Obesity and Overweight.” 2021. www.who.int.</p>
+    <p>Centers for Disease Control and Prevention. “Childhood Obesity Facts.” 2022. www.cdc.gov.</p>
+  </div>
+</body>
+</html>
