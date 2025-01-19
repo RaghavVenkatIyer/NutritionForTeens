@@ -229,6 +229,13 @@
             return div;
           }
         </script>
+   <div class="recaptcha-container">
+        <div class="g-recaptcha" data-sitekey="6LfSrlYqAAAAAKP7M7NlJMtchJUaFcuxnW0zfLgR"></div>
+        <button type="submit">Submit</button>
+      </div>
+  
+      <div id="result"></div>
+    </div>
  <script>
     // Handle button clicks
     document.addEventListener('click', function(event) {
@@ -245,12 +252,6 @@
           formData.append('recaptchaToken', recaptchaResponse);
           document.getElementById('result').innerText = "reCAPTCHA verification successful!";
         }
-      }
-    });
-    const content = document.querySelector('.content');
-    const disqusContainer = document.querySelector('.disqus-container'); // Get the Disqus container
-    const progressBarContainer = document.querySelector('.progress-bar-container');
-    const normalTextElements = document.querySelectorAll('.normal-text');
 
   </script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
