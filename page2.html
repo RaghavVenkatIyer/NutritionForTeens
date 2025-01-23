@@ -1,3 +1,8 @@
+**Updated HTML Code with Center-Aligned Images**
+
+Here is the complete code with the two images center-aligned:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,7 +98,7 @@
     }
     .calculator input {
       width: 90%;
-      padding: 10px;
+      padding : 10px;
       margin: 10px 0;
       border: 1px solid #ccc;
       border-radius: 5px;
@@ -112,19 +117,15 @@
     .image-container {
       text-align: center;
       margin: 20px 0;
-      width: 700px;
-      height: 500px;
     }
     .image-container img {
-      max-width: 100%;
-      height: auto;
-      width: 700px;
-      height: 500px;
+      width: 150px; /* Set both images to the same size */
+      height: 150px; /* Set both images to the same size */
     }
   </style>
 </head>
 <body>
-  <h1><u>BMI and Fat Percentage Calculators</h1></u>
+  <h1><u>BMI and Fat Percentage Calculators</u></h1>
 
   <!-- Google Translate -->
   <div id="google_translate_element"></div>
@@ -146,10 +147,8 @@
   </div>
 
   <div class="image-container">
-    <img src="image2.2.jpg" alt="BMI and Fat Percentage Information"alt="Centered Image" />
-  </div>
-  <div class="image-container">
-    <img src="image2.1.jpg" alt="Person Standing on Weighing Scale"alt="Centered Image" />
+    <img src="image2.2.jpg" alt="BMI and Fat Percentage Information" />
+    <img src="image2.1.jpg" alt="Person Standing on Weighing Scale" />
   </div>
 
   <h2>How BMI and Fat Percentage Can Be Used to Help Reduce Obesity</h2>
@@ -182,7 +181,7 @@
       <input type="number" id="fat-waist" placeholder="Waist circumference in cm" />
       <button onclick="calculateFatPercentage()">Calculate Fat Percentage</button>
       <p id="fat-percentage-result"></p>
-      <p id="fat-category"></p>
+      < p id="fat-category"></p>
     </div>
   </div>
 
