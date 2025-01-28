@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Page</title>
+
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #FFFAE5, #FFC107, #FF7043);
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      padding: 20px;
+      color: #2E7D32;
+    }
+    .content-section {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: justify;
+    }
+    .form-container {
+      margin: 20px auto;
+      text-align: center;
+    }
+    iframe {
+      border: none;
+      width: 80%;
+      height: 500px;
+    }
+
+    /* Animation Bar Styles */
+    .animation-bar {
+      height: 10px;
+      width: 100%;
+      background: linear-gradient(90deg, #FFA726, #66BB6A, #29B6F6);
+      animation: fadeSlide 3s infinite alternate;
+    }
+    @keyframes fadeSlide {
+      0% {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+      100% {
+        opacity: 0.4;
+        transform: translateX(100%);
+      }
+    }
+
+    /* Bottom Animation Element */
+    .bottom-animation {
+      height: 30px;
+      width: 100%;
+      background: linear-gradient(90deg, #FF7043, #FFA726, #66BB6A);
+      border-top: 5px solid #1B5E20;
+      animation: pulse 2s infinite alternate;
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
+
+    /* Button Styles */
+    .button-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .styled-button {
+      background: linear-gradient(to right, #66BB6A, #FFA726);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .styled-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .styled-button:active {
+      transform: scale(0.9);
+    }
+  </style>
+</head>
+<body>
+  <!-- Title -->
+  <u><h1>Please provide your valuable feedback for website improvements or doubts</h1></u>
+
+  <!-- Buttons Section -->
+  <div class="button-container">
+    <button class="styled-button" onclick="location.href='page1.html'">Homepage</button>
+    <button class="styled-button" onclick="location.href='page2.html'">Find Your BMI and Fat Percentage</button>
+    <button class="styled-button" onclick="location.href='page3.html'">Get Your Personalized Nutrition Plan</button>
+  </div>
+
+  <!-- Animation Bar Below Buttons -->
+  <div class="animation-bar"></div>
+
+  <div class="content-section">
+    <p>
+      Your feedback is crucial for enhancing this website and ensuring it meets the needs of all users. Whether you have questions, suggestions, or concerns, we encourage you to share them with us. By doing so, you play a vital role in shaping the future updates and features of this platform.
+    </p>
+    <p>
+      In this feedback form, you can share any specific issues you've encountered, ideas for improving the user experience, or additional features you would like to see. If you have any doubts about using the website or its content, feel free to mention them here. We value your input and are committed to responding promptly to your queries.
+    </p>
+    <p>
+      Please ensure that your feedback is detailed and constructive to help us address your concerns effectively. Your privacy is respected, and your responses will be used solely for the purpose of improving this platform. Together, we can make this website a better resource for everyone.
+    </p>
+    <p>
+      Thank you for taking the time to help us improve. Your opinions and insights are greatly appreciated!
+    </p>
+  </div>
+
+  <!-- Feedback Form Section -->
+  <div class="form-container">
+    <!-- Placeholder for Google Form -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeUBxz3eQmILzE5gt0mLLw5kWwZfnAyGAO89x8Xr85kUg1HkA/viewform?embedded=true" width="640" height="1800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </iframe>
+  </div>
+
+  <!-- Bottom Animation Element -->
+  <div class="bottom-animation"></div>
+</body>
+</html>

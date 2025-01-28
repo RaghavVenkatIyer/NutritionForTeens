@@ -79,8 +79,7 @@
     }
     .image-text-container img {
       max-width: 100%;
-      height: 500;
-      width: 700;
+      height: auto;
       border-radius: 10px;
       margin-top: 20px;
     }
@@ -142,6 +141,7 @@
   <div class="center-buttons">
         <button onclick="location.href='page1.html'">Homepage</button>
         <button onclick="location.href='page2.html'">Find Your BMI and Fat Percentage</button>
+        <button onclick="location.href='page4.html'">Feedback Form</button>
   </div>
 
   <div class="animation-bar"></div>
@@ -162,7 +162,7 @@
       <br><br>
       By incorporating proper nutrition into daily life, teenagers can reduce the risk of obesity and its associated complications, including diabetes, heart disease, and joint problems. Globally, addressing obesity through nutrition has the potential to save billions in healthcare costs and improve overall quality of life.
     </p>
-    <img src="image3.1.jpg" alt="Healthy Nutrition" alt="Centered Image" style="width: 700px; height: 500px;">
+    <img src="image3.1.jpg" alt="Healthy Nutrition">
   </div>
     <!-- Chatbot Code Starting -->
     <div id="chat-container" class="chatbot-container">
@@ -230,12 +230,6 @@
             return div;
           }
         </script>
-   <div class="recaptcha-container">
-        <div class="g-recaptcha" data-sitekey="6LfSrlYqAAAAAKP7M7NlJMtchJUaFcuxnW0zfLgR"></div>
-      </div>
-  
-      <div id="result"></div>
-    </div>
  <script>
     // Handle button clicks
     document.addEventListener('click', function(event) {
@@ -252,6 +246,12 @@
           formData.append('recaptchaToken', recaptchaResponse);
           document.getElementById('result').innerText = "reCAPTCHA verification successful!";
         }
+      }
+    });
+    const content = document.querySelector('.content');
+    const disqusContainer = document.querySelector('.disqus-container'); // Get the Disqus container
+    const progressBarContainer = document.querySelector('.progress-bar-container');
+    const normalTextElements = document.querySelectorAll('.normal-text');
 
   </script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
