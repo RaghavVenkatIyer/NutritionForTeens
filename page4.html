@@ -13,25 +13,40 @@
       background: linear-gradient(to bottom, #FFFAE5, #FFC107, #FF7043);
       color: #333;
     }
+
     h1 {
       text-align: center;
       padding: 20px;
       color: #2E7D32;
+      margin-bottom: 20px;
     }
+
     .content-section {
       padding: 20px;
       max-width: 1200px;
       margin: 0 auto;
       text-align: justify;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
     }
+
     .form-container {
       margin: 20px auto;
       text-align: center;
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
+
     iframe {
       border: none;
-      width: 80%;
-      height: 500px;
+      width: 100%;
+      height: 1800px;
+      border-radius: 10px;
     }
 
     /* Animation Bar Styles */
@@ -40,7 +55,9 @@
       width: 100%;
       background: linear-gradient(90deg, #FFA726, #66BB6A, #29B6F6);
       animation: fadeSlide 3s infinite alternate;
+      margin: 20px 0;
     }
+
     @keyframes fadeSlide {
       0% {
         opacity: 1;
@@ -59,7 +76,9 @@
       background: linear-gradient(90deg, #FF7043, #FFA726, #66BB6A);
       border-top: 5px solid #1B5E20;
       animation: pulse 2s infinite alternate;
+      margin-top: 30px;
     }
+
     @keyframes pulse {
       0% {
         transform: scale(1);
@@ -76,6 +95,7 @@
       text-align: center;
       margin: 20px 0;
     }
+
     .styled-button {
       background: linear-gradient(to right, #66BB6A, #FFA726);
       border: none;
@@ -88,10 +108,12 @@
       cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s;
     }
+
     .styled-button:hover {
       transform: scale(1.1);
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
+
     .styled-button:active {
       transform: scale(0.9);
     }
@@ -111,6 +133,7 @@
   <!-- Animation Bar Below Buttons -->
   <div class="animation-bar"></div>
 
+  <!-- Content Section -->
   <div class="content-section">
     <p>
       Your feedback is crucial for enhancing this website and ensuring it meets the needs of all users. Whether you have questions, suggestions, or concerns, we encourage you to share them with us. By doing so, you play a vital role in shaping the future updates and features of this platform.
@@ -128,9 +151,7 @@
 
   <!-- Feedback Form Section -->
   <div class="form-container">
-    <!-- Placeholder for Google Form -->
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeUBxz3eQmILzE5gt0mLLw5kWwZfnAyGAO89x8Xr85kUg1HkA/viewform?embedded=true" width="640" height="1800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </iframe>
   </div>
 
   <!-- Bottom Animation Element -->
