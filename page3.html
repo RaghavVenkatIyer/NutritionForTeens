@@ -256,7 +256,7 @@
         const botMessageDiv = createBotMessageDiv("Thinking...");
         document.querySelector('.chat-history').appendChild(botMessageDiv);
 
-        const model = genAI.getGenerativeModel({ model: "text-bison-001" });
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
         const result = await model.generateContent(inputText);
         const text = extractTextFromResponse(result.response);
 
