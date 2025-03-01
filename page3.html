@@ -205,7 +205,7 @@
   </script>
   <script type="module">
     import { GoogleGenerativeAI } from "@google/generative-ai";
-    const API_KEY = "AIzaSyB7CLgpUT6ZDomNpmM2cuPM1Sa4O47B_mo";
+    const API_KEY = "AIzaSyDgwlFfFCJ4l1avnT6QmoVzIXB-3WFmhO8";
     const genAI = new GoogleGenerativeAI(API_KEY);
 
     const userInput = document.getElementById("userprompt");
@@ -256,7 +256,7 @@
         const botMessageDiv = createBotMessageDiv("Thinking...");
         document.querySelector('.chat-history').appendChild(botMessageDiv);
 
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
         const result = await model.generateContent(inputText);
         const text = extractTextFromResponse(result.response);
 
