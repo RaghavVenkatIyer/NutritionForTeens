@@ -198,7 +198,7 @@
   <div class="recaptcha-container">
     <div class="g-recaptcha" 
          data-sitekey="6LfSrlYqAAAAAKP7M7NlJMtchJUaFcuxnW0zfLgR" 
-         data-callback="enableGoButton"></div>
+         data-callback="verifyCaptcha"></div>
   </div>
 
   <div id="result"></div>
@@ -216,11 +216,6 @@
     const genAI = new GoogleGenerativeAI(API_KEY);
 
     const goButton = document.getElementById("goButton");
-
-    // Enable "Go" button after reCAPTCHA is verified
-    function enableGoButton() {
-      goButton.disabled = false;
-    }
 
     goButton.addEventListener('click', run);
 
@@ -263,7 +258,7 @@
     function createUser MessageDiv(message) {
       const div = document.createElement("div");
       div.className = "message user-message";
-      div.textContent = `:User  ${message}`;
+      div.textContent = `:User   ${message}`;
       return div;
     }
 
@@ -272,6 +267,12 @@
       div.className = "message bot-message";
       div.textContent = `Bot: ${message}`;
       return div;
+    }
+  </script>
+
+  <script>
+    function verifyCaptcha(token) {
+      document.getElementById("goButton").disabled = false;
     }
   </script>
 
